@@ -1,4 +1,6 @@
 TARGET = parser
+FILES = $(shell ls ./tests/)
+
 
 all: parser clean
 

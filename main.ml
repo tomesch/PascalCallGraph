@@ -46,12 +46,9 @@ let make_call_graph p =
                       my_hash
 ;;
 
-let print_call_graph_couple i f init =
-    init^"  "^i^" -> "^f^";\n"
-;;
-
 let print_call_graph cg=
-    print_string ("digraph program {\n"^(Hashtbl.fold print_call_graph_couple cg "")^"}\n")
+    let print_call_graph_couple i f init = init^"  "^i^" -> "^f^";\n" in 
+        print_string ("digraph program {\n  program;\n"^(Hashtbl.fold print_call_graph_couple cg "")^"}\n")
 ;;
 
 let main =
