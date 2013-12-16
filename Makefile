@@ -5,25 +5,25 @@ FILES = $(shell ls ./tests/)
 all: parser clean
 
 parser: lexer.cmo parser.cmo main.cmo
-	ocamlc -o $@ lexer.cmo parser.cmo main.cmo
+	@ocamlc -o $@ lexer.cmo parser.cmo main.cmo
 
 clean:
-	rm -rf parser.ml parser.mli lexer.ml lexer.cmi lexer.cmo main.cmi main.cmo parser.cmi parser.cmo syntax.cmi
+	@rm -rf parser.ml parser.mli lexer.ml lexer.cmi lexer.cmo main.cmi main.cmo parser.cmi parser.cmo syntax.cmi
 
 depend:
-	ocamldep *.ml *.mli > .depend
+	@ocamldep *.ml *.mli > .depend
 
 .SUFFIXES: .ml .mli .mll .mly .cmo .cmi
 
 .ml.cmo:
-	ocamlc -c $<
+	@ocamlc -c $<
 .mli.cmi:
-	ocamlc -c $<
+	@ocamlc -c $<
 .mll.ml:
-	ocamllex $<
+	@ocamllex $<
 .mly.ml:
-	ocamlyacc $<
+	@ocamlyacc $<
 .mly.mli:
-	ocamlyacc $<
+	@ocamlyacc $<
 
 include .depend
