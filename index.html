@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PascalCallGraph</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            border-collapse:collapse;
+            width:1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        th{
+            font-weight: normal;
+            background: #ccc;
+            padding: 5px;
+        }
+        td,th{
+            border:1px solid #000;
+        }
+        img{
+            max-width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Generated</th>
+            <th>Expected</th>
+        </tr>
+        <tr>
+            <td><img src="tests/results/a.p.png" /></td>
+            <td><img src="tests/expected/a.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/arit.p.png" /></td>
+            <td><img src="tests/expected/arit.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/arith.p.png" /></td>
+            <td><img src="tests/expected/arith.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/arith2.p.png" /></td>
+            <td><img src="tests/expected/arith2.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/atree.p.png" /></td>
+            <td><img src="tests/expected/atree.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/automate.p.png" /></td>
+            <td><img src="tests/expected/automate.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/bignum.p.png" /></td>
+            <td><img src="tests/expected/bignum.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/bigtail.p.png" /></td>
+            <td><img src="tests/expected/bigtail.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/bigtri.p.png" /></td>
+            <td><img src="tests/expected/bigtri.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/bool.p.png" /></td>
+            <td><img src="tests/expected/bool.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/calcul.p.png" /></td>
+            <td><img src="tests/expected/calcul.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/color.p.png" /></td>
+            <td><img src="tests/expected/color.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/color2.p.png" /></td>
+            <td><img src="tests/expected/color2.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/copy.p.png" /></td>
+            <td><img src="tests/expected/copy.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/couple.p.png" /></td>
+            <td><img src="tests/expected/couple.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/court-circuit.p.png" /></td>
+            <td><img src="tests/expected/court-circuit.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/dead.p.png" /></td>
+            <td><img src="tests/expected/dead.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/debile.p.png" /></td>
+            <td><img src="tests/expected/debile.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/dicho.p.png" /></td>
+            <td><img src="tests/expected/dicho.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/distance.p.png" /></td>
+            <td><img src="tests/expected/distance.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/divbyzero.p.png" /></td>
+            <td><img src="tests/expected/divbyzero.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/dutch.p.png" /></td>
+            <td><img src="tests/expected/dutch.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/echo.p.png" /></td>
+            <td><img src="tests/expected/echo.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/ex.p.png" /></td>
+            <td><img src="tests/expected/ex.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/exam.p.png" /></td>
+            <td><img src="tests/expected/exam.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/expr.p.png" /></td>
+            <td><img src="tests/expected/expr.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact.p.png" /></td>
+            <td><img src="tests/expected/fact.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact1.p.png" /></td>
+            <td><img src="tests/expected/fact1.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact2.p.png" /></td>
+            <td><img src="tests/expected/fact2.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact3.p.png" /></td>
+            <td><img src="tests/expected/fact3.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact4.p.png" /></td>
+            <td><img src="tests/expected/fact4.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact5.p.png" /></td>
+            <td><img src="tests/expected/fact5.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fact6.p.png" /></td>
+            <td><img src="tests/expected/fact6.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/fib.p.png" /></td>
+            <td><img src="tests/expected/fib.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/find.p.png" /></td>
+            <td><img src="tests/expected/find.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/formula.p.png" /></td>
+            <td><img src="tests/expected/formula.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/gcd.p.png" /></td>
+            <td><img src="tests/expected/gcd.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/gcdfunc.p.png" /></td>
+            <td><img src="tests/expected/gcdfunc.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/hanoi.p.png" /></td>
+            <td><img src="tests/expected/hanoi.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/heapsort.p.png" /></td>
+            <td><img src="tests/expected/heapsort.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/hp.p.png" /></td>
+            <td><img src="tests/expected/hp.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/int32.p.png" /></td>
+            <td><img src="tests/expected/int32.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/interf.p.png" /></td>
+            <td><img src="tests/expected/interf.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/killer.p.png" /></td>
+            <td><img src="tests/expected/killer.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/lex.p.png" /></td>
+            <td><img src="tests/expected/lex.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/loop.p.png" /></td>
+            <td><img src="tests/expected/loop.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/many.p.png" /></td>
+            <td><img src="tests/expected/many.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/matmult.p.png" /></td>
+            <td><img src="tests/expected/matmult.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/mrec.p.png" /></td>
+            <td><img src="tests/expected/mrec.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/mul.p.png" /></td>
+            <td><img src="tests/expected/mul.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/mul2.p.png" /></td>
+            <td><img src="tests/expected/mul2.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/mulbin.p.png" /></td>
+            <td><img src="tests/expected/mulbin.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/plus6.p.png" /></td>
+            <td><img src="tests/expected/plus6.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/power.p.png" /></td>
+            <td><img src="tests/expected/power.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/poweriter.p.png" /></td>
+            <td><img src="tests/expected/poweriter.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/priorite.p.png" /></td>
+            <td><img src="tests/expected/priorite.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/queens.p.png" /></td>
+            <td><img src="tests/expected/queens.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/quick.p.png" /></td>
+            <td><img src="tests/expected/quick.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/rec.p.png" /></td>
+            <td><img src="tests/expected/rec.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/sieve.p.png" /></td>
+            <td><img src="tests/expected/sieve.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/spill-coalescing.p.png" /></td>
+            <td><img src="tests/expected/spill-coalescing.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/succ.p.png" /></td>
+            <td><img src="tests/expected/succ.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/tail.p.png" /></td>
+            <td><img src="tests/expected/tail.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/tak.p.png" /></td>
+            <td><img src="tests/expected/tak.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/tregs.p.png" /></td>
+            <td><img src="tests/expected/tregs.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/tregs2.p.png" /></td>
+            <td><img src="tests/expected/tregs2.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/tri.p.png" /></td>
+            <td><img src="tests/expected/tri.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/triangle.p.png" /></td>
+            <td><img src="tests/expected/tri.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/trivial.p.png" /></td>
+            <td><img src="tests/expected/trivial.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/trivial2.p.png" /></td>
+            <td><img src="tests/expected/trivial2.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/trivial3.p.png" /></td>
+            <td><img src="tests/expected/trivial3.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/uninitialized.p.png" /></td>
+            <td><img src="tests/expected/uninitialized.svg" /></td>
+        </tr>
+        <tr>
+            <td><img src="tests/results/zero.p.png" /></td>
+            <td><img src="tests/expected/zero.svg" /></td>
+    </tr></ta
+    ble>
+</body>
+</html>
